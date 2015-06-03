@@ -1,7 +1,5 @@
 - @restaurants.each do |restaurant| 
 	%h2
 		= link_to restaurant.name, restaurant
-	%p	
-		= restaurant.address
 	
 = link_to "New Restaurant", new_restaurant_path		

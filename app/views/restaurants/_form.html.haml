@@ -1,6 +1,11 @@
 = simple_form_for @restaurant do |f|
 	= f.input :name
 	= f.input :address
-	= f.input :open
-	= f.input :close
+
+	Work hours: 
+	%br
+	= f.time_select :open
+	till
+	= f.time_select :close
+	%br
 	= f.submit
