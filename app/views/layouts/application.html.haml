@@ -7,6 +7,20 @@
 	= javascript_include_tag 'application', 'data-turbolinks-track' => true 
 	= csrf_meta_tags
 %body
+	%nav.navbar.navbar-inverse.navbar-fixed-top
+		.navbar-header
+			%button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+				%span.sr-only Toggle navigation
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+		#navbar.collapse.navbar-collapse
+			%ul.nav.navbar-nav
+				%li
+					=link_to "PizzaNetwork", root_path 
+				%li	
+					=link_to "New restaurant", new_restaurant_path
+
 	- if notice
 		#notice_wrapper
 			%p.notice
