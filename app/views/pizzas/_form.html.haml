@@ -1,5 +1,5 @@
 = simple_form_for([@restaurant, @restaurant.pizzas.build]) do |f|
-	= f.input :name
-	= f.input :price
-	= f.input :description
+	= f.input :name, label: "Dish name:"
+	= f.input :price, label: "Price:"
+	= f.input :description, label: "Ingredients:"
 	= f.submit

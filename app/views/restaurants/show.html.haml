@@ -1,11 +1,12 @@
 .wrap
-	%h1= @restaurant.name
+	%h1 
+		Restaurant name: #{@restaurant.name}
 
-	%h3= @restaurant.address
+	%h3 
+		Restaurant address: #{@restaurant.address}
 
-	%h4
-		Work Hours: 
-		%br
+	%h3
+		Work Hours:
 		= @restaurant.open.strftime("%H : %M")
 		Till	 
 		= @restaurant.close.strftime("%H : %M")
@@ -13,16 +14,21 @@
 
 	%h2
 		= @restaurant.pizzas.count
-		Pizzas
+		Dishes in the menu
 	%h4	
 		- @pizzas.each do |pizza|
-			%h1= pizza.name
-			%p= pizza.price
-			%p= pizza.description
+
+			%h2
+				Dish name: #{pizza.name} 
+			%p 
+				Dish price: #{pizza.price}
+			%p 
+				Ingredients: #{pizza.description}
+			
 			= link_to "Edit", edit_restaurant_pizza_path(pizza.restaurant, pizza)
 			= link_to "Delete", [pizza.restaurant, pizza], method: :delete, data: {confirm: "Are you sure?"}
 
-	%h3 Add another pizza:
+	%h3 Add another dish:
 	= render "pizzas/form"
 
 

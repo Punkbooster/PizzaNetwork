@@ -1,7 +1,7 @@
 .wrap
 	%h1 Edit pizza
 	= simple_form_for([@restaurant, @pizza]) do |f|
-		= f.input :name
-		= f.input :price
-		= f.input :description
+		= f.input :name, label: "Dish name:"
+		= f.input :price, label: "Price:"
+		= f.input :description, label: "Ingredients:"
 		= f.submit

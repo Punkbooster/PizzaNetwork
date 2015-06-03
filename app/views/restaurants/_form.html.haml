@@ -1,7 +1,7 @@
 .wrap
 	= simple_form_for @restaurant do |f|
-		= f.input :name
-		= f.input :address
+		= f.input :name, label: "Restaurant name:"
+		= f.input :address, label: "Restaurant address:"
 
 		Work hours: 
 		%br
