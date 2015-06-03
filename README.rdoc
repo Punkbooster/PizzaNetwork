@@ -1,28 +1,31 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this app is to help user to manage restaurants networks & menus, that they are having. Every restaurant has many dishes. User has many restaurants & dishes.
 
-Things you may want to cover:
+* Ruby version:
+  - 2.2.1
+* Rails version:
+  - 4.2.0
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Gems:
+  - Devise
+  - HAML
+  - Simple_form
+  - Bootstrap-sass
+  - Rspec-rails
+  - Capybara
+  - Launchy
+  - Guard-rspec
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Registered User have possibility to:
+  - CRUD restaurants
+  - CRUD dishes
+  - Sign out
+  - View all pages
+
+* Unregistered User have possibility to:
+  - View home page
+  - Sign up
+
+
