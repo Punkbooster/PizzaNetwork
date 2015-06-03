@@ -11,6 +11,20 @@
 		= @restaurant.close.strftime("%H : %M")
 	%br
 
+	%h2
+		= @restaurant.pizzas.count
+		Pizzas
+	%h4	
+		- @pizzas.each do |pizza|
+			%h1= pizza.name
+			%p= pizza.price
+			%p= pizza.description
+			= link_to "Edit", edit_restaurant_pizza_path(pizza.restaurant, pizza)
+			= link_to "Delete", [pizza.restaurant, pizza], method: :delete, data: {confirm: "Are you sure?"}
+
+	%h3 Add another pizza:
+	= render "pizzas/form"
+
 
 	=link_to "Edit", edit_restaurant_path(@restaurant), class: "button"
 	=link_to "Destroy", restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?"}, class: "button"
