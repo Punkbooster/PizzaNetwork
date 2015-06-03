@@ -1,0 +1,7 @@
+%h1= @restaurant.name
+%p= @restaurant.address
+%p= @restaurant.open
+%p= @restaurant.close
+
+=link_to "Edit", edit_restaurant_path(@restaurant), class: "button"
+=link_to "Destroy", restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?"}, class: "button"
