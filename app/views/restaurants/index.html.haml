@@ -3,8 +3,5 @@
 		= link_to restaurant.name, restaurant
 	%p	
 		= restaurant.address
-	%p
-		Published at:
-		=time_ago_in_words(restaurant.created_at)
-
+	
 = link_to "New Restaurant", new_restaurant_path		
