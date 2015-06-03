@@ -6,9 +6,9 @@
 		Restaurant address: #{@restaurant.address}
 
 	%h3
-		Work Hours:
+		Work Hours: from
 		= @restaurant.open.strftime("%H : %M")
-		Till	 
+		till	 
 		= @restaurant.close.strftime("%H : %M")
 	%br
 
