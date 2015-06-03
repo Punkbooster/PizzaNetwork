@@ -11,15 +11,20 @@
 		.navbar-header
 			%button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
 				%span.sr-only Toggle navigation
-				%span.icon-bar
-				%span.icon-bar
-				%span.icon-bar
 		#navbar.collapse.navbar-collapse
 			%ul.nav.navbar-nav
 				%li
-					=link_to "PizzaNetwork", root_path 
-				%li	
-					=link_to "New restaurant", new_restaurant_path
+					=link_to "PizzaNetwork", root_path
+				- if user_signed_in?	 
+					%li	
+						=link_to "New Restaurant", new_restaurant_path
+					%li
+						=link_to "Log Out", destroy_user_session_path,:method => :delete	
+				- else		
+					%li
+						=link_to "Sign Up", new_user_registration_path
+					%li	
+						=link_to "Sign In", new_user_session_path		
 
 	- if notice
 		#notice_wrapper
