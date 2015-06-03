@@ -1,6 +1,6 @@
 == README
 
-The purpose of this app is to help user to manage restaurant networks & menus, that they are having. Every restaurant has many dishes. User has many restaurants & dishes.
+The purpose of this app is to help user to manage restaurant networks & menus. Every restaurant has many dishes. User has many restaurants & dishes.
 
 * Ruby version:
   - 2.2.1
