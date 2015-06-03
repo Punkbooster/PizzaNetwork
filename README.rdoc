@@ -18,13 +18,13 @@ The purpose of this app is to help user to manage restaurant networks & menus. E
   - Guard-rspec
 
 
-* Registered User have possibility to:
+* Registered User has possibility to:
   - CRUD restaurants
   - CRUD dishes
   - Sign out
   - View all pages
 
-* Unregistered User have possibility to:
+* Unregistered User has possibility to:
   - View home page
   - Sign up
 
